@@ -1,0 +1,76 @@
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    font-size: 14px;
+    border: none;
+    background: none;
+    color: white;
+}
+h1, h2, h3, p, button {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 14px;
+}
+p {
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+nav {
+    display: flex;
+    background-color: black;
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em .3em 1em;
+    background-color: #000000;
+}
+.header-hamburger img {
+    width: 28px;
+    padding-top: 3px;
+}
+.header-hamburger {
+    display: block;
+}
+.nav-dropdown-button {
+    display: flex;
+}
+.thumbnail {
+    max-width: 100%;
+}
+.video-skirt {
+    display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 1em;
+}
+.film-section {
+    margin: 2em 0;
+}
+.film-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
