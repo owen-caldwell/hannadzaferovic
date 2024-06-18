@@ -30,14 +30,20 @@
 </head>
 <body>
     <header> <!--fullwidth flexbox items centered-->
-        <span class="header-text"><a href="index"><h1>Hanna Dzaferovic</h1></a><img class="nav-dropdown-button"></img></span> <!--zindex in front of button-->
+        <span class="header-text"><a href="index"><h1>Hanna Dzaferovic</h1></a><img class="nav-dropdown-button" src="static/navarrow.svg"></img></span> <!--zindex in front of button-->
         <button class="header-hamburger"><img src="static/hamburger.svg"></button> <!--This button needs to be a full width flexbox, but the actual "svg" will be aligned-right-->
+        <span class="contact-button"><a href="contact">CONTACT</a></span>
     </header>
     <nav>
-        <ul class="navlist">
-            <li><a class="navlink" href="title">Title</a></li>
-        </ul>
-        <span class="contact-button"><a href="contact">CONTACT</a></span>
+        <div class="navlist">
+            <a class="navlink" href="title">Pelham 123</a>
+            <a class="navlink" href="title">Number of Squads</a>
+            <a class="navlink" href="title">Lips Tight</a>
+            <a class="navlink" href="title">If I were a god.</a>
+            <a class="navlink" href="title">Work of Art</a>
+            <a class="navlink" href="title">Letters to Her</a>
+            <a class="navlink" href="title">Action</a>
+        </div>
     </nav>
     <div class="video-skirt">
         <video autoplay loop muted playsinline>
@@ -46,18 +52,84 @@
         <button class="downarrow"><img src="static/downarrow.svg"></button>
     </div>
     <main>
-        <section class="film-section">
+        <section style="margin-top: 0" class="film-section">
             <img class="thumbnail" src="static/hanna-test.jpg">
             <span class="film-details">
-                <h3 class="film-title">NUMBER OF SQUADS</h3>
-                <p class="film-date">01 | 15 | 23</p>
+                <div class="film-heading">
+                    <h3 class="film-title">NUMBER OF SQUADS</h3>
+                    <p class="film-date">01 | 15 | 23</p>
+                </div>
+                <p class="film-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Lacus vestibulum sed arcu non odio euismod. 
+                    Egestas diam in arcu cursus euismod quis viverra. 
+                    Nisi porta lorem mollis aliquam. Tempor orci eu lobortis elementum 
+                    nibh tellus molestie nunc non. Sit amet facilisis magna etiam. 
+                    Neque gravida in fermentum et sollicitudin ac orci. Tempus iaculis 
+                    urna id volutpat lacus laoreet non curabitur. Fames ac turpis egestas 
+                    integer eget aliquet.
+                </p>
+            </span>
+        </section>
+        <section class="film-section flip">
+            <img class="thumbnail" src="static/hanna-test.jpg">
+            <span class="film-details">
+                <div class="film-heading">
+                    <h3 class="film-title">NUMBER OF SQUADS</h3>
+                    <p class="film-date">01 | 15 | 23</p>
+                </div>
+                <p class="film-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Lacus vestibulum sed arcu non odio euismod. 
+                    Egestas diam in arcu cursus euismod quis viverra. 
+                    Nisi porta lorem mollis aliquam. Tempor orci eu lobortis elementum 
+                    nibh tellus molestie nunc non. Sit amet facilisis magna etiam. 
+                    Neque gravida in fermentum et sollicitudin ac orci. Tempus iaculis 
+                    urna id volutpat lacus laoreet non curabitur. Fames ac turpis egestas 
+                    integer eget aliquet.
+                </p>
             </span>
         </section>
         <section class="film-section">
             <img class="thumbnail" src="static/hanna-test.jpg">
             <span class="film-details">
-                <h3 class="film-title">NUMBER OF SQUADS</h3>
-                <p class="film-date">01 | 15 | 23</p>
+                <div class="film-heading">
+                    <h3 class="film-title">NUMBER OF SQUADS</h3>
+                    <p class="film-date">01 | 15 | 23</p>
+                </div>
+                <p class="film-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Lacus vestibulum sed arcu non odio euismod. 
+                    Egestas diam in arcu cursus euismod quis viverra. 
+                    Nisi porta lorem mollis aliquam. Tempor orci eu lobortis elementum 
+                    nibh tellus molestie nunc non. Sit amet facilisis magna etiam. 
+                    Neque gravida in fermentum et sollicitudin ac orci. Tempus iaculis 
+                    urna id volutpat lacus laoreet non curabitur. Fames ac turpis egestas 
+                    integer eget aliquet.
+                </p>
+            </span>
+        </section>
+        <section class="film-section flip">
+            <img class="thumbnail" src="static/hanna-test.jpg">
+            <span class="film-details">
+                <div class="film-heading">
+                    <h3 class="film-title">NUMBER OF SQUADS</h3>
+                    <p class="film-date">01 | 15 | 23</p>
+                </div>
+                <p class="film-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Lacus vestibulum sed arcu non odio euismod. 
+                    Egestas diam in arcu cursus euismod quis viverra. 
+                    Nisi porta lorem mollis aliquam. Tempor orci eu lobortis elementum 
+                    nibh tellus molestie nunc non. Sit amet facilisis magna etiam. 
+                    Neque gravida in fermentum et sollicitudin ac orci. Tempus iaculis 
+                    urna id volutpat lacus laoreet non curabitur. Fames ac turpis egestas 
+                    integer eget aliquet.
+                </p>
             </span>
         </section>
     </main>

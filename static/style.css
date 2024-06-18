@@ -1,3 +1,11 @@
+.nav-dropdown-button {display: none;}
+.video-skirt {display: none;}
+.contact-button {display: none;}
+.film-description {display: none;}
+
+nav {
+    display: none;
+}
 body {
     background-color: #000000;
     margin: 0;
@@ -29,17 +37,12 @@ a {
     text-decoration: none;
     color: #ffffff;
 }
-nav {
-    display: flex;
-    background-color: black;
-    
-}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 1em .3em 1em;
-    background-color: #000000;
+    padding: 1em;
+    height: 8%;
 }
 .header-hamburger img {
     width: 28px;
@@ -48,14 +51,8 @@ header {
 .header-hamburger {
     display: block;
 }
-.nav-dropdown-button {
-    display: flex;
-}
 .thumbnail {
     max-width: 100%;
-}
-.video-skirt {
-    display: none;
 }
 main {
     display: flex;
@@ -66,11 +63,91 @@ main {
     margin: 1em;
 }
 .film-section {
-    margin: 2em 0;
+    margin: 3em 0;
 }
 .film-details {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 100%;
+}
+.film-heading {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+/* when viewport is greater than or equal to 760px */
+@media (min-width: 760px) {
+    .header-hamburger {display: none;}
+    .contact-button {display: block;}
+    .film-description {display: block;}
+    /* flip class applied to every other film-section via flip.js */
+    .flip {flex-direction: row-reverse}
+    .flip .film-details {
+        text-align: right;
+        margin: 0 2em 0 0;
+    }
+    .flip .film-heading {flex-direction: row-reverse;}
+    .flip .film-date {margin-left: 1em}
+
+    .nav-dropdown-button {
+        display: flex;
+        width: 10px;
+        padding: .3em;
+        margin: .4em .4em .2em .4em;
+    }
+    header {
+        position: sticky;
+        top: 0;
+        max-width: 90vw;
+        margin: auto;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 61.4px;
+        padding: .6em 1em;
+        max-width: 90vw;
+        margin: auto;
+    }
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 170px;
+        width: 300px;
+    }
+    .navlist a {
+        margin: .5em 0;
+    }
+    .film-section {
+        display: flex;
+        max-width: 1300px;
+    }
+    .film-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-top: white 1px dotted;
+        margin-left: 2em;
+    }
+    .film-heading {
+        display: flex;
+        justify-content: space-between;
+        margin: 1.5em 0;
+    }
+    .film-title {font-size: 20px;}
+    .film-date {
+        font-size: 16px;
+        margin-right: 1em;
+    }
+    .thumbnail {
+        border: solid .5px white;
+        max-width: 53%;
+        /* TO FIX: image stretches vertically around ~800 pixels */
+    }
+    .header-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
