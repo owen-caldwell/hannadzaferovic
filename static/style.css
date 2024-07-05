@@ -75,16 +75,24 @@ main {
     width: 100%;
 }
 .title-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
 .title-gallery-item {
+    position: relative;
+    max-height: 1000px;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .title-gallery-item img {
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 /* when viewport is greater than or equal to 760px */
 @media (min-width: 760px) {
@@ -163,15 +171,6 @@ main {
         align-items: center;
     }
     .title-gallery {
-        width: 100%;
-        height: 100%;
-    }
-    .title-gallery-item {
-        max-width: 1000px;
-        margin: 2em 0;
-    }
-    .title-gallery-item img {
-        max-width: 1000px;
         width: 100%;
         height: 100%;
     }
