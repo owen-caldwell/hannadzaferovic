@@ -74,6 +74,9 @@ main {
     justify-content: space-between;
     width: 100%;
 }
+.title-gallery {width: 100%;}
+.title-gallery-item {width: 100%;}
+.title-gallery-item img {max-width: 100%;}
 /* when viewport is greater than or equal to 760px */
 @media (min-width: 760px) {
     .header-hamburger {display: none;}
