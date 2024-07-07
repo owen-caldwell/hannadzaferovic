@@ -27,7 +27,12 @@
     </title>
     <link rel="icon" type="image/x-icon" href="">
     <link rel="stylesheet" href="static/style.css">
-    <script src="lazysizes.min.js" async=""></script>
+    <style>
+        .film-description {
+            display: block;
+            margin: 1em 0;
+        }
+    </style>
 </head>
 <body>
     <header> <!--fullwidth flexbox items centered-->
@@ -46,8 +51,8 @@
             <a class="navlink" href="title">Action</a>
         </div>
     </nav>
-    <main>
-        <span class="film-details wlimit">
+    <main class="title-page">
+        <span class="film-details removemargin restrict-width">
             <div class="film-heading">
                 <h3 class="film-title">NUMBER OF SQUADS</h3>
                 <p class="film-date">01 | 15 | 23</p>
@@ -66,54 +71,66 @@
         </span>
         <div class="title-gallery">
             <div class="title-gallery-item">
-                <img data-srcset="
-                static/media/danceincircles_1_2048.webp 2048w,
-                static/media/danceincircles_1_2000.webp 2000w,
-                static/media/danceincircles_1_1600.webp 1600w,
-                static/media/danceincircles_1_1080.webp 1080w,
-                static/media/danceincircles_1_800.webp 800w,
-                static/media/danceincircles_1_500.webp 500w"
-                    data-sizes="auto"
-                    alt="gallery image"
-                    class="lazyload" />
-            </div>
-            <div class="title-gallery-item">
-                <img data-srcset="
-                static/media/danceincircles_2_2048.webp 2048w,
-                static/media/danceincircles_2_2000.webp 2000w,
-                static/media/danceincircles_2_1600.webp 1600w,
-                static/media/danceincircles_2_1080.webp 1080w,
-                static/media/danceincircles_2_800.webp 800w,
-                static/media/danceincircles_2_500.webp 500w"
-                    data-sizes="auto"
-                    alt="gallery image"
-                    class="lazyload" />
-            </div>
-            <div class="title-gallery-item">
-                <img data-srcset="
-                static/media/danceincircles_3_2048.webp 2048w,
-                static/media/danceincircles_3_2000.webp 2000w,
-                static/media/danceincircles_3_1600.webp 1600w,
-                static/media/danceincircles_3_1080.webp 1080w,
-                static/media/danceincircles_3_800.webp 800w,
-                static/media/danceincircles_3_500.webp 500w"
-                    data-sizes="auto"
-                    alt="gallery image"
-                    class="lazyload" />
-            </div>
-            <div class="title-gallery-item">
-                <img data-srcset="
-                static/media/danceincircles_4_2048.webp 2048w,
-                static/media/danceincircles_4_2000.webp 2000w,
-                static/media/danceincircles_4_1600.webp 1600w,
-                static/media/danceincircles_4_1080.webp 1080w,
-                static/media/danceincircles_4_800.webp 800w,
-                static/media/danceincircles_4_500.webp 500w"
-                    data-sizes="auto"
-                    alt="gallery image"
-                    class="lazyload" />
+                <img srcset="
+                    static/media/danceincircles_1_2048.webp  2048w,
+                    static/media/danceincircles_1_2000.webp  2000w,
+                    static/media/danceincircles_1_1600.webp  1600w,
+                    static/media/danceincircles_1_1080.webp  1080w,
+                    static/media/danceincircles_1_800.webp  800w,
+                    "
+                    sizes="
+                    (min-width: 499px) 500px,
+                    (min-width: 799px) 800px,
+                    (min-width: 1079px) 1080px,
+                    (min-width: 1599px) 1600px,
+                    (min-width: 1999px) 2000px,
+                    2048px
+                    "
+                    src="static/media/danceincircles_1_500.webp"
+                    alt="Gallery image"
+                    class="gallery-image img-featured" />
             </div>
         </div>
     </main>
+    <!-- <div class="title-gallery continued">
+        <div class="title-gallery-item">
+            <img srcset="
+                static/media/danceincircles_1_2048.webp  2048w,
+                static/media/danceincircles_1_2000.webp  2000w,
+                static/media/danceincircles_1_1600.webp  1600w,
+                static/media/danceincircles_1_1080.webp  1080w,
+                static/media/danceincircles_1_800.webp  800w,
+                "
+                sizes="
+                (min-width: 0px) and (max-width: 760px), 800px,
+                (min-width: 761px) and (max-width: 1024px), 1080px,
+                (min-width: 1025px) and (max-width: 1440px), 1600px,
+                (min-width: 1441px) and (max-width: 1920px), 2000px,
+                2048px
+                "
+                src="static/media/danceincircles_1_500.webp"
+                alt="Gallery image"
+                class="gallery-image"/>
+        </div>
+        <div class="title-gallery-item">
+            <img srcset="
+                static/media/danceincircles_1_2048.webp  2048w,
+                static/media/danceincircles_1_2000.webp  2000w,
+                static/media/danceincircles_1_1600.webp  1600w,
+                static/media/danceincircles_1_1080.webp  1080w,
+                static/media/danceincircles_1_800.webp  800w,
+                "
+                sizes="
+                (min-width: 0px) and (max-width: 760px), 800px,
+                (min-width: 761px) and (max-width: 1024px), 1080px,
+                (min-width: 1025px) and (max-width: 1440px), 1600px,
+                (min-width: 1441px) and (max-width: 1920px), 2000px,
+                2048px
+                "
+                src="static/media/danceincircles_1_500.webp"
+                alt="Gallery image"
+                class="gallery-image"/>
+        </div>
+    </div> -->
 </body>
 </html>

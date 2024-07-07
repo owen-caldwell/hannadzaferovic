@@ -8,9 +8,10 @@ nav {
 }
 body {
     background-color: #000000;
-    margin: 0;
+    margin: 1em;
     padding: 0;
     box-sizing: border-box;
+    height: auto;
 }
 button {
     font-size: 14px;
@@ -41,7 +42,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
     height: 8%;
 }
 .header-hamburger img {
@@ -56,53 +56,58 @@ header {
 }
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    margin: 1em;
+    margin-top: 2em;
 }
 .film-section {
     margin: 3em 0;
 }
 .film-details {
     display: flex;
+    flex-direction: column;
     max-width: 100%;
 }
 .film-heading {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-.title-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 70vw;
-    height: 100%;
+    margin: .5em 0;
 }
 .title-gallery-item {
-    position: relative;
-    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+}
+.gallery-image {
+    width: 100%;
+    max-width: 1920px;
     height: auto;
+}
+.restrict-width {
+    width: 100%;
+}
+.img-featured {
+    border: solid .5px white;
+}
+.continued .title-gallery-item {
     margin: 2em 0;
 }
-.title-gallery-item img {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-}
-.wlimit {
-    max-width: 70vw;
-}
+
 /* when viewport is greater than or equal to 760px */
 @media (min-width: 760px) {
+    body {
+        margin: 2em;
+        height: calc(100vh - 4em);
+    }
+    main {margin-top: 0;}
+    .brief-film-description {display: none;}
+    .film-description {display: block;}
     .header-hamburger {display: none;}
     .contact-button {display: block;}
-    .film-description {display: block;}
     /* flip class applied to every other film-section via flip.js */
     .flip {flex-direction: row-reverse}
     .flip .film-details {
@@ -120,17 +125,14 @@ main {
     }
     header {
         position: sticky;
-        top: 0;
-        max-width: 90vw;
+        top: 2em;
         margin: auto;
     }
     nav {
         display: flex;
         flex-direction: column;
         position: sticky;
-        top: 61.4px;
-        padding: .6em 1em;
-        max-width: 90vw;
+        top: 76px;
         margin: auto;
     }
     .navlist {
@@ -151,8 +153,11 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        border-top: white 1px dotted;
         margin-left: 2em;
+        width: 100%;
+    }
+    .removemargin {
+        margin-left: 0;
     }
     .film-heading {
         display: flex;
@@ -166,6 +171,7 @@ main {
     }
     .thumbnail {
         border: solid .5px white;
+        border-radius: 10px;
         max-width: 53%;
         /* TO FIX: image stretches vertically around ~800 pixels */
     }
@@ -174,8 +180,36 @@ main {
         justify-content: space-between;
         align-items: center;
     }
-    .title-gallery {
+    .title-gallery-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 100%;
+    }
+    .gallery-image {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+    }
+    .restrict-width {
+        max-width: 40vw;
+    }
+    .title-page {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        max-width: 100%;
+        margin-top: 2em;
+    }
+    .img-featured {
+        border: solid .5px white;
+        max-width: 90%;
+    }
+    .continued {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 2em 0;
     }
 }
