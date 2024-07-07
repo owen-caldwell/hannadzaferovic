@@ -76,6 +76,12 @@ main {
     width: 100%;
     margin: .5em 0;
 }
+.film-title {
+    text-decoration: underline;
+}
+.film-tag {
+    color: white;
+}
 .title-gallery-item {
     display: flex;
     flex-direction: column;
@@ -101,7 +107,6 @@ main {
 @media (min-width: 760px) {
     body {
         margin: 2em;
-        height: calc(100vh - 4em);
     }
     main {margin-top: 0;}
     .brief-film-description {display: none;}
@@ -180,30 +185,28 @@ main {
         justify-content: space-between;
         align-items: center;
     }
+    .title-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 900px;
+    }
     .title-gallery-item {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
     }
     .gallery-image {
         width: 100%;
-        max-width: 800px;
         height: auto;
     }
-    .restrict-width {
-        max-width: 40vw;
-    }
     .title-page {
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
         align-items: flex-start;
         max-width: 100%;
-        margin-top: 2em;
     }
     .img-featured {
         border: solid .5px white;
-        max-width: 90%;
     }
     .continued {
         display: flex;
